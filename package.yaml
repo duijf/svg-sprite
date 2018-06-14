@@ -1,0 +1,24 @@
+name: svg-sprite
+version: 0.1.0.0
+github: "duijf/svg-sprite"
+
+dependencies:
+- base >= 4.7 && < 5
+- directory
+- filepath
+- xml
+- pretty-simple
+
+library:
+  source-dirs: src
+
+executables:
+  svg-sprite:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - svg-sprite
